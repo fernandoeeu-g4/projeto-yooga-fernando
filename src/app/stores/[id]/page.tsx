@@ -1,3 +1,5 @@
+"use cache";
+
 import { Separator } from "@/components/ui/separator";
 import { getStore } from "@/queries/stores/use-store";
 import { BestSellersProducts } from "./_components/best-seller-products";
