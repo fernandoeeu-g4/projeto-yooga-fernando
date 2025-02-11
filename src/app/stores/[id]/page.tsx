@@ -16,6 +16,10 @@ export default async function StorePage() {
       <OfferProducts />
       <Separator />
       <BestSellersProducts />
+      <Separator />
+      <div className="pb-10">
+        <BestSellersProducts />
+      </div>
     </div>
   );
 }
