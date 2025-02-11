@@ -1,7 +1,14 @@
 
 ## Começando
 
-Este é um projeto [Next.js](https://nextjs.org) criado com [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Este é um projeto [Next.js](https://nextjs.org) versão 15, criado com [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+Para instalar as dependências, execute:
+
+```bash
+npm i -g pnpm
+pnpm i
+```
 
 Para iniciar o servidor de desenvolvimento, execute:
 
