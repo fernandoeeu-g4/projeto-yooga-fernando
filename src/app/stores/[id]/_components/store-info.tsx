@@ -5,10 +5,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import Image from "next/image";
+import { Skeleton } from "@/components/ui/skeleton";
 import { StoreType } from "@/queries/stores/use-store";
 import { Gift } from "lucide-react";
-import { Skeleton } from "@/components/ui/skeleton";
+import Image from "next/image";
 
 export type StatusType = "open" | "closed";
 
@@ -82,7 +82,7 @@ export const StoreInfo = ({ store }: { store: StoreType }) => {
       </div>
       <div className="flex items-center gap-4">
         <Select defaultValue={deliveryOptions[0].value}>
-          <SelectTrigger className="w-max">
+          <SelectTrigger className="w-max min-w-[138px]">
             <SelectValue placeholder="Theme" />
           </SelectTrigger>
           <SelectContent>
