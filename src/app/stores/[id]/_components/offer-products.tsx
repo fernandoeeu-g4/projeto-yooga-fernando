@@ -12,7 +12,11 @@ import { fakeRandomDelay } from "@/shared/helpers/async";
 const OfferProductsSkeleton = () => (
   <section className=" flex flex-col gap-3">
     <div className="text-primary text-xl font-bold w-48 h-6 bg-gray-200 rounded-md animate-pulse"></div>
-    <Carousel>
+    <Carousel
+      opts={{
+        dragFree: true,
+      }}
+    >
       <CarouselContent>
         {Array.from({ length: 3 }).map((_, index) => (
           <CarouselItem key={index} className="basis-1/2 flex flex-col gap-3">

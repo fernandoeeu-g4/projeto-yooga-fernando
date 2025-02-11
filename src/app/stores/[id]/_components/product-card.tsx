@@ -1,13 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import NextImage from "next/image";
+import NextImage, { StaticImageData } from "next/image";
 
 type BaseType = {
   className?: string;
 };
 
 type ProductImageProps = BaseType & {
-  image: string;
+  image: StaticImageData;
 };
 
 function Image({ image, className }: ProductImageProps) {
@@ -98,7 +98,12 @@ type NameProps = BaseType & {
 
 function Name({ children, className }: NameProps) {
   return (
-    <h3 className={cn("text-primary text-xs font-semibold", className)}>
+    <h3
+      className={cn(
+        "text-primary text-xs font-semibold leading-[0.8]",
+        className
+      )}
+    >
       {children}
     </h3>
   );

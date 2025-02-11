@@ -9,7 +9,7 @@ const BestSellersProductsSkeleton = () => (
     <div className="text-primary text-xl font-bold w-32 h-6 bg-gray-200 rounded-md animate-pulse"></div>
     <div className="flex gap-4 flex-col">
       {Array.from({ length: 3 }).map((_, index) => (
-        <div className="flex flex-col gap-2" key={index}>
+        <div className="flex flex-col gap-4" key={index}>
           <div className="h-24 w-full bg-gray-200 rounded-md animate-pulse"></div>
           {index < 2 ? <Separator /> : null}
         </div>
@@ -34,7 +34,7 @@ async function BestSellersProductsContent() {
       <h2 className="text-primary text-xl font-bold">Melhores da casa</h2>
       <div className="flex gap-4 flex-col">
         {bestSellersProducts.map((product, index) => (
-          <div className="flex flex-col gap-2" key={product.id}>
+          <div className="flex flex-col gap-4" key={product.id}>
             <BestSellerProductCard key={product.id} product={product} />
             {index < bestSellersProducts.length - 1 ? <Separator /> : null}
           </div>

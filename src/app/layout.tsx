@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./tailwind.css";
 import Providers from "./providers";
 import bodyBackground from "../../public/body-background.webp";
+import { Search } from "lucide-react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +39,9 @@ export default function RootLayout({
         }}
       >
         <Providers>{children}</Providers>
+        <div className="size-12 rounded-lg bg-[#E5E7E9] flex items-center justify-center fixed shadow-sm top-4 right-4">
+          <Search className="size-5 text-primary" />
+        </div>
       </body>
     </html>
   );

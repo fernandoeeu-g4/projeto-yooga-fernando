@@ -61,7 +61,7 @@ export const StoreInfo = ({ store }: { store: StoreType }) => {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex gap-4">
+      <div className="flex gap-3">
         <Image
           src={image}
           alt={name}
@@ -71,7 +71,7 @@ export const StoreInfo = ({ store }: { store: StoreType }) => {
         />
         <div className="flex flex-col gap-2">
           <h1 className="text-lg font-bold text-primary">{name}</h1>
-          <div className="text-secondary flex items-center gap-1 text-sm">
+          <div className="text-secondary flex items-center gap-1 text-sm font-semibold">
             <span>{category}</span>
             <span>•</span>
             <span>{distance}</span>
@@ -93,7 +93,7 @@ export const StoreInfo = ({ store }: { store: StoreType }) => {
             ))}
           </SelectContent>
         </Select>
-        <div className="flex items-center gap-1  text-sm text-secondary ">
+        <div className="flex items-center gap-1 font-semibold text-sm text-secondary ">
           <span>{deliveryTimeEstimate}</span>
           <span>•</span>
           <Status status={status} />
@@ -112,8 +112,8 @@ export const StoreInfo = ({ store }: { store: StoreType }) => {
 export const StoreInfoSkeleton = () => {
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex gap-4">
-        <Skeleton className="h-15 min-h-15 w-15 min-w-15 rounded-lg" />
+      <div className="flex gap-3">
+        <Skeleton className="h-15 min-h-15 w-15 min-w-15 rounded-full" />
         <div className="flex flex-col gap-2">
           <Skeleton className="h-6 w-48" />
           <div className="flex items-center gap-1">
