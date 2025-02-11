@@ -29,10 +29,7 @@ type DescriptionProps = BaseType & {
 function Description({ children, className }: DescriptionProps) {
   return (
     <span
-      className={cn(
-        "text-secondary font-semibold text-xs text-wrap",
-        className
-      )}
+      className={cn("text-secondary font-medium text-xs text-wrap", className)}
     >
       {children}
     </span>
@@ -100,7 +97,7 @@ function Name({ children, className }: NameProps) {
   return (
     <h3
       className={cn(
-        "text-primary text-xs font-semibold leading-[0.8]",
+        "text-primary text-xs font-medium leading-[0.8]",
         className
       )}
     >

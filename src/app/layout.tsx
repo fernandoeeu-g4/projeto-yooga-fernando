@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
+
 import "./tailwind.css";
 import Providers from "./providers";
 import bodyBackground from "../../public/body-background.webp";
 import { Search } from "lucide-react";
+
+const inter = Inter({ subsets: ["latin"] });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased font-[Geist] mt-[18vh]`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased font-[Inter] mt-[18vh]`}
         style={{
           backgroundImage: `url(${bodyBackground.src})`,
           backgroundSize: "100%",
