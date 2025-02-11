@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./tailwind.css";
 import Providers from "./providers";
+import bodyBackground from "../../public/body-background.webp";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,7 +27,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased font-[Geist] pt-[18vh]`}
+        style={{
+          backgroundImage: `url(${bodyBackground.src})`,
+          backgroundSize: "100%",
+          backgroundPosition: "center -200px",
+          backgroundRepeat: "no-repeat",
+          height: "100vh", // Ensure the body takes up the full viewport height
+          width: "100vw", // Ensure the body takes up the full viewport width
+        }}
       >
         <Providers>{children}</Providers>
       </body>
