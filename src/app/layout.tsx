@@ -32,20 +32,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased font-[Inter] mt-[18vh]`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased font-[Inter]`}
         style={{
-          backgroundImage: `url(${bodyBackground.src})`,
-          backgroundSize: "100%",
-          backgroundPosition: "center -200px",
-          backgroundRepeat: "no-repeat",
+          // backgroundImage: `url(${bodyBackground.src})`,
+          // backgroundSize: "100%",
+          // backgroundPosition: "center -200px",
+          // backgroundRepeat: "no-repeat",
           height: "100vh", // Ensure the body takes up the full viewport height
           width: "100vw", // Ensure the body takes up the full viewport width
         }}
       >
-        <Providers>{children}</Providers>
-        <div className="size-12 rounded-lg bg-[#E5E7E9] flex items-center justify-center fixed shadow-sm top-4 right-4">
+        {/* <Providers></Providers> */}
+        {children}
+        {/* <div className="size-12 rounded-lg bg-[#E5E7E9] flex items-center justify-center fixed shadow-sm top-4 right-4">
           <Search className="size-5 text-primary" />
-        </div>
+        </div> */}
       </body>
     </html>
   );
